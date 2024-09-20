@@ -14,7 +14,14 @@ module.exports = {
           'display': 'none', /* Safari and Chrome */
         },
       });
-    }
+    },
+    function ({ addUtilities }) {
+      addUtilities({
+        '.touch-pan-y': {
+          'touch-action': 'pan-y',
+        },
+      });
+    },
   ],
   daisyui: {
     themes: true, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]

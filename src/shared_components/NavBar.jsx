@@ -2,6 +2,7 @@ import React from 'react'
 import { FaUser } from 'react-icons/fa';
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { RiNotification4Fill } from 'react-icons/ri';
+import MobileSideMenu from './MobileSideMenu';
 
 const NavBar = () => {
     return (
@@ -13,7 +14,7 @@ const NavBar = () => {
                     alt="alt placeholder" className="w-8 h-8  inline mx-auto"/>
                 </div>
                 <div className="md:hidden cursor-pointer text-slate-400 hover:text-gray-700 p-2 bg-slate-600 rounded-full">
-                    <HiMenuAlt1 fontSize={16} />  
+                    <MobileSideMenu />
                 </div>
                 {/* <div className=" cursor-pointer hover:text-gray-700 p-2 bg-gray-200 rounded-full">
                     <HiMenuAlt1 fontSize={16} />  

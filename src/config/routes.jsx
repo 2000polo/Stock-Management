@@ -2,6 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import AuthView from "../views/auth_view";
 import AppView from "../views/app_view";
 import Dashboard from "../views/app_view/Dashboard";
+import BorkerManagment from "../views/app_view/BorkerManagment";
+import { FaRegGem } from "react-icons/fa";
+import { TbDeviceDesktopAnalytics } from "react-icons/tb";
+import { PiNewspaperBold } from "react-icons/pi";
 
 export const router = createBrowserRouter([
     { 
@@ -20,64 +24,21 @@ export const router = createBrowserRouter([
         {
           path: "/app/dashboard",
           Component: Dashboard,
-          title: 'Dashboard'
+          title: 'Dashboard',
+          icon: <TbDeviceDesktopAnalytics fontSize={20} />
         },
         {
-          path: "/app/tasks",
-          title: 'Tasks',
-          // children: [
-          //   {
-          //     path: "/app/tasks/task-list",
-          //     Component: TaskList,
-          //     title: 'Task List'
-          //   },
-          //   {
-          //     path: "/app/tasks/kanban-board",
-          //     Component: KanbanBoard,
-          //     title: 'Kanban Board'
-          //   },
-          // ]
-        },
-        // {
-        //   path: "/app/tasks",
-        //   Component: Profile,
-        //   title: 'Tasks',
-        //   children: [
-        //     {
-        //       path: "/app/tasks/tickets",
-        //       Component: Profile,
-        //       title: 'Open a Ticket'
-        //     },
-        //     {
-        //       path: "/app/tasks/projects",
-        //       Component: Profile,
-        //       title: 'Taks',
-        //     },
-        //   ]
-        // },
-        // {
-        //   path: "/app/my-tasks",
-        //   Component: Tasks,
-        //   title: 'My Tasks'
-        // },
-        {
-          path: "/app/projects",
-          title: 'Projects',
+          path: "/app/stock-brokers",
+          Component: BorkerManagment,
+          title: 'Broker Management',
+          icon: <FaRegGem fontSize={20} />
         },
         {
-          path: "/app/profile",
-          title: 'Profile',
+          path: "/app/new-and-updates",
+          title: 'News & Updates',
+          icon: <PiNewspaperBold fontSize={20} />,
+          Component: BorkerManagment,
           
-          children: [
-            {
-              path: "/app/profile/dw",
-              title: 'Open a Ticket'
-            },
-            {
-              path: "/app/profile/sfsf",
-              title: 'Taks',
-            },
-          ]
         },
       ] 
     },
