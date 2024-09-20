@@ -25,11 +25,12 @@ const PortfolioChart = () => {
             strokeWidth: 2,
           },
         },
+        interactions: [{ type: 'brush' }, { type: 'pan', enable: false }, { type: 'zoom', enable: false }],
     };
 
     return (
-        <div className="col-span-1 bg-slate-800 rounded-md px-0 py-1">
-            <Area {...config} height={200} />
+        <div className="col-span-1 bg-slate-800 rounded-md px-0 py-1 touch-pan-y">
+            <Area {...config} height={250} />
         </div>
     )
 }

@@ -35,7 +35,7 @@ const Pichart = () => {
     }
 
   return (
-    <div className='bg-slate-800 rounded-md px-0 py-1 h-fit'>
+    <div className='bg-slate-800 rounded-md px-0 py-1 h-fit touch-pan-y"'>
         <Pie {...config} height={300} />
     </div>
   )
