@@ -6,6 +6,7 @@ import BorkerManagment from "../views/app_view/BorkerManagment";
 import { FaRegGem } from "react-icons/fa";
 import { TbDeviceDesktopAnalytics } from "react-icons/tb";
 import { PiNewspaperBold } from "react-icons/pi";
+import BrokerView from "../views/app_view/BrokerView";
 
 export const router = createBrowserRouter([
     { 
@@ -32,6 +33,13 @@ export const router = createBrowserRouter([
           Component: BorkerManagment,
           title: 'Broker Management',
           icon: <FaRegGem fontSize={20} />
+        },
+        {
+          path: "/app/stock-brokers-view",
+          Component: BrokerView,
+          hideInMenu: true
+          // title: 'Broker Management',
+          // icon: <FaRegGem fontSize={20} />
         },
         {
           path: "/app/new-and-updates",
